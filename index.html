@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Project - CSE 478 - Fall 2024</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="header">Contextualizing Inflation</div>
+  <div class="subtitle">By: Aadeesh-Noah-Jake-Justin-Shivit</div>
+
+  <div class="parallax parallax3"></div>
+  <section id="non-essentials" data-aos="fade-right">
+    <h2>Inflation</h2>
+    <p>
+      Many have heard on any outlet of media that inflation is on the rise.
+      Taken from the U.S. Bureau of Labor Statistics (<a
+        href="url">https://www.bls.gov/cpi/tables/supplemental-files/</a>), this dataset documents
+      the increase of the Consumer Price Index (CPI) all the way from the 1920s to current day.
+      The CPI indicates the price of a weight average market basket of consumer goods and services purchased by
+      househols.
+      This first visualization is to visualize for you how fast the CPI has been increasing as it approaches current day.
+      Despite economic pressures, consumers still spend on leisure. Here, we compare CPI trends with video game sales.
+      How does this spending compare to what someone earns weekly?
+    </p>
+    <p>
+      <br>
+      <br>
+      With this in mind, you can interactively explore in this section how increasing CPI, which correlates with
+      increasing inflation, affects
+      the purchase of goods outside of what is considered in CPI; Video Games!
+      <br>
+      <br>
+      <b>Please choose how many consoles you would like to visualize!</b>
+    </p>
+    <div id="lineGraphViz" class="grid-item">
+      <div id="controlPane">
+        <label>Choose Console Platform(s):</label>
+        <br>
+        <input type="checkbox" id="CPI" name="CPI" value="CPI" checked="true" disabled="true">
+        <label id="CPILabel" for="CPI">CPI</label>
+        <div id="platformSelect" class="columnOrg"></div>
+      </div>
+      <div id="lineGraphContainer"></div>
+    </div>
+  </section>
+
+  <div class="parallax parallax1"></div>
+  <section id="scatterplot" data-aos="fade-up">
+    <h2>How Does Inflation Affect Household Income?</h2>
+    <p>
+      By visualizing the relationships between household income, age, household size, and inflation rates, we can
+      better understand how inflation impacts different demographics. This scatterplot will help you see whether modern
+      income levels are sufficient to maintain a good quality of life.
+    </p>
+    <div id="scatterPlotVis" class="grid-item"></div>
+  </section>
+
+  <div class="parallax parallax2"></div>
+  <section id="weekly-earnings" data-aos="zoom-in">
+    <h2>How Much Do People Really Earn?</h2>
+    <p>
+      Over the years, inflation has eroded the purchasing power of weekly earnings for the average worker.
+      Let's start by examining the trends in weekly real earnings and how they compare to inflation.
+    </p>
+    <div id="graph4" class="grid-item">
+      <div>
+        <select id="yearDropdown">
+          <option value="all">All Years</option>
+        </select>
+      </div>
+      <div class="svg-container">
+        <svg id="barChart" class="svg" style="min-width: 1200px;"></svg>
+      </div>
+      <div id="tooltip"></div>
+    </div>
+  </section>
+
+  <div class="parallax parallax4"></div>
+  <section id="merchandise" data-aos="zoom-in">
+    <h2>Shifting Priorities in Spending</h2>
+    <p>
+      Inflation has not only influenced major prices across the board, but has also influenced
+      how we allocate money on non-essentials as well! Using this dataset, (<a
+            href="url">https://store.nba.com/jerseys/</a>), the pie chart highlights how spending
+      wages on regular items such as NBA merchandise has evolved during inflationary periods.
+      Examining inflation's impact on retail jersey prices from 2005 to 2025,
+      the pie chart illustrates the toll inflation has taken on Sports merchandise and it's average price.
+    </p>
+    <p>
+      <br>
+      <br>
+        The Pie Chart is interactive and has multiple features that you can use.
+      Try clicking a few buttons to rotate or change colors of the slices or even drag and move slices at your will!
+      <br>
+      <br>
+    </p>
+    <div id="pieChartViz" class="grid-item">
+      <div class="container">
+        <div class="svg-container">
+          <svg class="svg" viewBox="0 0 500 350">
+            <text x="50%" y="50%" text-anchor="middle" fill="#888" font-size="24px">Pie Chart Space</text>
+          </svg>
+        </div>
+        <!-- Button below the pie chart -->
+        <div class="button-container" style="">
+          <button id="rotateButton" class="rotate-button">Rotate Pie Chart</button>
+          <button id="changeColorButton" class="rotate-button">Change Colors</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="parallax parallax5"></div>
+  <section id="global-food-prices" data-aos="fade-left">
+    <h2>The Global Impact of Inflation</h2>
+    <p>
+      Food prices are rising globally, disproportionately affecting low-income households. This bubble chart
+      illustrates food price inflation across regions and products.
+    </p>
+    <div id="graph5" class="grid-item"></div>
+  </section>
+
+  <div class="parallax parallax6"></div>
+  <section id="reflection" data-aos="fade-up" style="margin-bottom: 0; padding-bottom: 0;">
+    <h2>What Can We Learn?</h2>
+    <p>
+      Inflation shapes our financial realities, affecting essentials and discretionary spending alike.
+      As we navigate economic pressures, what choices will we prioritize for a sustainable future?
+    </p>
+  </section>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="linegraphviz.js"></script>
+  <script src="Barchart.js"></script>
+  <script src="Piechart.js"></script>
+  <script src="BubbleChart.js"></script>
+  <script src="scatterplot.js"></script>
+  <script src="scrollAnimations.js"></script>
+</body>
+
+</html>
